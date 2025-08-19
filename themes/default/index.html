@@ -15,8 +15,8 @@
   <link rel="icon" type="image/x-icon" href="https://image.cf.shdrr.org/favicon-02.ico" />
   <link rel="Shortcut Icon" href="https://image.cf.shdrr.org/favicon-02.ico">
   <title><!--{title}--></title> 
-  <meta name="keywords" content="<!--{opt.keyWords}-->" />
-  <meta name="description" content="<!--{opt.siteDescription}-->" />
+  <meta name="keywords" content="{{ &OPT.keyWords}}" />
+  <meta name="description" content="{{ &OPT.siteDescription}}" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" /> 
   <link rel="dns-prefetch" href="//s.w.org" /> 
   <script type="text/javascript">
@@ -84,7 +84,7 @@ img.emoji {
     <div class="io-title-description"> 
      <a href="/" title="<!--{opt.siteName}-->" rel="home"><!--{opt.siteName}--></a> 
      <br ...="" /> 
-     <a class="site-description"><!--{opt.siteDescription}--></a> 
+     <a class="site-description">{{ &OPT.siteDescription}}</a> 
     </div> 
 	<!--{widgetMenu.html}-->
 
