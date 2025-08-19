@@ -6,7 +6,7 @@
 		<meta name="renderer" content="webkit">
 		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
 		<title>{{ &articleSingle.title }} - {{ &OPT.siteName }}</title>
-		<meta name="keywords" content="{{ &keyWords }}" />
+		<meta name="keywords" content="{{ &OPT.keyWords }}" />
 		<meta name="description" content="{{ &OPT.siteDescription }}" />
 
 		<link rel='stylesheet' id='stylesheet-css' href='https://cdn.jsdelivr.net/gh/gdtool/cloudflare-workers-blog@master/themes/JustNews/files/main.css' type='text/css' media='all' />
@@ -50,7 +50,7 @@
 					<nav class="navbar-left primary-menu">
 						<ul id="menu-%e5%af%bc%e8%88%aa" class="nav navbar-nav wpcom-adv-menu">
 							{{ #widgetMenuList }}
-								<li class="menu-item"><a href="{{ &url }}">{{ &title }}</a></li>
+								<li class="menu-item"><a href="{{ &url }}">{{ &OPT.siteName }}</a></li>
 							{{ /widgetMenuList }}
 						</ul>
 					</nav>
@@ -98,8 +98,8 @@
 
 									{{ #articleNewer }}	
 									<div class="entry-page-prev j-lazy lazyloaded" style="background-image: url(&quot;{{ &img }}&quot;); display: block;" data-original="{{ &img }}" data-bg="{{ &img }}" fifu-width="392" fifu-height="86">
-										<a href="{{ &url }}" title="{{ &title }}" rel="prev" >
-											<span>{{ &title }}</span></a>
+										<a href="{{ &url }}" title="{{ &OPT.siteName }}" rel="prev" >
+											<span>{{ &OPT.siteName }}</span></a>
 										<div class="entry-page-info">
 											<span class="pull-left">
 												<i class="wpcom-icon wi">
@@ -113,8 +113,8 @@
 
 									{{ #articleOlder }}
 									<div class="entry-page-next j-lazy lazyloaded" style="background-image: url(&quot;{{ &img }}&quot;); display: block;" data-original="{{ &img }}" data-bg="{{ &img }}" fifu-width="392" fifu-height="86">
-										<a href="{{ &url }}" title="{{ &title }}" rel="next" >
-											<span>{{ &title }}</span></a>
+										<a href="{{ &url }}" title="{{ &OPT.siteName }}" rel="next" >
+											<span>{{ &OPT.siteName }}</span></a>
 										<div class="entry-page-info">
 											<span class="pull-right">下一篇
 												<i class="wpcom-icon wi">
@@ -142,12 +142,12 @@
 							{{ #widgetRecentlyList }}
 							<li class="item">
 								<div class="item-img">
-									<a class="item-img-inner" href="{{ &url }}" title="{{ &title }}">
+									<a class="item-img-inner" href="{{ &url }}" title="{{ &OPT.siteName }}">
 										<img width="480" height="264" src="{{ &img }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="{{ &img }}" /></a>
 								</div>
 								<div class="item-content">
 									<p class="item-title">
-										<a href="{{ &url }}" title="{{ &title }}">{{ &title }}</a></p>
+										<a href="{{ &url }}" title="{{ &OPT.siteName }}">{{ &OPT.siteName }}</a></p>
 									<p class="item-date">{{ &createDate10 }}</p></div>
 							</li>
 							{{ /widgetRecentlyList }}									
@@ -178,7 +178,7 @@
 							<span>链接</span></h3>
 						<ul class='xoxo blogroll'>
 							{{ #widgetLinkList }}
-									<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
+									<li><a href="{{ &url }}" target="_blank">{{ &OPT.siteName }}</a></li>
 							{{ /widgetLinkList }}
 						</ul>
 					</div>

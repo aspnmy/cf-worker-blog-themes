@@ -101,7 +101,7 @@
 							<ul id="menu-top" class="nav-menu">
 								{{ #widgetMenuList }}
 									<li id="menu-item-211" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-211">
-										<a href="{{ &url }}">{{ &title }}</a>
+										<a href="{{ &url }}">{{ &OPT.siteName }}</a>
 									</li>
 								{{ /widgetMenuList }}
 							</ul>
@@ -160,12 +160,12 @@
 									<span class="nav-previous">
 										{{ #articleNewer }}
 										<a href="{{ &url }}" rel="prev">
-											<span class="meta-nav">←</span>{{ &title }}</a>
+											<span class="meta-nav">←</span>{{ &OPT.siteName }}</a>
 										{{ /articleNewer }}
 									</span>
 									<span class="nav-next">
 										{{ #articleOlder }}
-										<a href="{{ &url }}" rel="next">{{ &title }}
+										<a href="{{ &url }}" rel="next">{{ &OPT.siteName }}
 											<span class="meta-nav">→</span></a>
 										{{ /articleOlder }}
 									</span>
@@ -182,7 +182,7 @@
 								<p class="widget-title">近期文章</p>
 								<ul>
 									{{ #widgetRecentlyList }}
-									<li><a href="{{ &url }}">{{ &title }}</a></li>
+									<li><a href="{{ &url }}">{{ &OPT.siteName }}</a></li>
 									{{ /widgetRecentlyList }}
 								</ul>
 							</aside>
@@ -209,7 +209,7 @@
 								<ul>
 									<li><a href="/admin/">管理站点</a></li>
 									{{ #widgetLinkList }}
-									<li><a href="{{ &url }}">{{ &title }}</a></li>
+									<li><a href="{{ &url }}">{{ &OPT.siteName }}</a></li>
 									{{ /widgetLinkList }}
 								</ul>
 							</aside>

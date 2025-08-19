@@ -5,8 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="renderer" content="webkit">
 		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
-		<title>{{ &title }}</title>
-		<meta name="keywords" content="{{ &keyWords }}" />
+		<title>{{ &OPT.siteName }}</title>
+		<meta name="keywords" content="{{ &OPT.keyWords }}" />
 		<meta name="description" content="{{ &OPT.siteDescription }}" />
 
 		<link rel='stylesheet' id='stylesheet-css' href='https://cdn.jsdelivr.net/gh/gdtool/cloudflare-workers-blog@master/themes/JustNews/files/main.css' type='text/css' media='all' />
@@ -49,7 +49,7 @@
 					<nav class="navbar-left primary-menu">
 						<ul id="menu-%e5%af%bc%e8%88%aa" class="nav navbar-nav wpcom-adv-menu">
 							{{ #widgetMenuList }}
-								<li class="menu-item"><a href="{{ &url }}">{{ &title }}</a></li>
+								<li class="menu-item"><a href="{{ &url }}">{{ &OPT.siteName }}</a></li>
 							{{ /widgetMenuList }}
 						</ul>
 					</nav>
@@ -70,8 +70,8 @@
 								{{ #articleList }}
 								<li class="item" id="post-{{&id}}">
 									<div class="item-img">
-										<a class="item-img-inner" href="{{ &url }}" title="{{ &title }}" rel="bookmark">
-											<img width="437" height="300" src="{{ &img }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="{{ &title }}" title="{{ &title }}" data-original="{{ &img }}" /></a>
+										<a class="item-img-inner" href="{{ &url }}" title="{{ &OPT.siteName }}" rel="bookmark">
+											<img width="437" height="300" src="{{ &img }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="{{ &OPT.siteName }}" title="{{ &OPT.siteName }}" data-original="{{ &img }}" /></a>
 										{{ #category }}
 											<a class="item-category" href="/category/{{&.}}" >{{&.}}</a>
 										{{ /category }}
@@ -79,7 +79,7 @@
 									</div>
 									<div class="item-content">
 										<h2 class="item-title">
-											<a href="{{ &url }}" rel="bookmark">{{ &title }}</a></h2>
+											<a href="{{ &url }}" rel="bookmark">{{ &OPT.siteName }}</a></h2>
 										<div class="item-excerpt">
 											<p>{{ &contentText }} ...</p>
 										</div>
@@ -139,12 +139,12 @@
 							{{ #widgetRecentlyList }}
 							<li class="item">
 								<div class="item-img">
-									<a class="item-img-inner" href="{{ &url }}" title="{{ &title }}">
+									<a class="item-img-inner" href="{{ &url }}" title="{{ &OPT.siteName }}">
 										<img width="480" height="264" src="{{ &img }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="{{ &img }}" /></a>
 								</div>
 								<div class="item-content">
 									<p class="item-title">
-										<a href="{{ &url }}" title="{{ &title }}">{{ &title }}</a></p>
+										<a href="{{ &url }}" title="{{ &OPT.siteName }}">{{ &OPT.siteName }}</a></p>
 									<p class="item-date">{{ &createDate10 }}</p></div>
 							</li>
 							{{ /widgetRecentlyList }}									
@@ -175,7 +175,7 @@
 							<span>链接</span></h3>
 						<ul class='xoxo blogroll'>
 							{{ #widgetLinkList }}
-									<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
+									<li><a href="{{ &url }}" target="_blank">{{ &OPT.siteName }}</a></li>
 							{{ /widgetLinkList }}
 						</ul>
 					</div>

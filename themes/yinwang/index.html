@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="zh-CN">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="zh-CN">
+ <!--<![endif]-->
 <html>
 	<head>
-		<title>{{ &title }}</title>
-		<meta name="keywords" content="{{ &keyWords }}" />
+		<title>{{ &OPT.siteName }}</title>
+		<meta name="keywords" content="{{ &OPT.keyWords }}" />
 		<meta name="description" content="{{ &OPT.siteDescription }}" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
@@ -28,11 +37,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/" title="{{ &OPT.siteDescription }}" data-toggle="tooltip" data-placement="right">{{ &title }}</a></div>
+					<a class="navbar-brand" href="/" title="{{ &OPT.siteDescription }}" data-toggle="tooltip" data-placement="right">{{ &OPT.siteName }}</a></div>
 				<div class="navbar-collapse collapse" id="navbar-bs" style="height:1px;">
 					<ul class="nav navbar-nav navbar-right">
 						{{ #widgetMenuList }}
-						<li><a href="{{ &url }}" target="_self">{{ &title }}</a></li>
+						<li><a href="{{ &OPT.SITE_DOMAIN }}" target="_self">{{ &OPT.siteName }}</a></li>
 						{{ /widgetMenuList }}
 					</ul>
 				</div>
@@ -44,7 +53,7 @@
 					{{ #articleList }}
 					<li class="list-group-item title">
 						<div class="date">{{ &createDate10 }}</div>
-						<a href="/article/{{&id}}/{{&link}}.html" target="_self">{{ &title }}</a>
+						<a href="/article/{{&id}}/{{&link}}.html" target="_self">{{ &OPT.siteName }}</a>
 					</li>
 					{{ /articleList }}
 				</ul>
